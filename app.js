@@ -9,6 +9,7 @@ app.set("view engine", "ejs");
 // Rota principal
 const indexRouter = require("./routes/index");
 app.use("/", indexRouter);
+app.use(express.static(path.join(__dirname,'public')));
  
 // Rotas para alunos
 const alunosRouter = require("./routes/alunos");
